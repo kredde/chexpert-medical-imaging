@@ -68,6 +68,24 @@ docker exec --user root -it radio  /bin/bash
 
 
 ## Run the demo application
+### Locally
+
+1. Clone this repository
+
+2. Install the dependencies
+```
+pip install -r requirements.txt
+```
+
+3. Run the application
+```
+PYTHONPATH=/path/to/repo streamlit run app/main.py
+```
+
+4. The application will run on port `8501` of your local machine
+
+
+### Using docker
 
 1. Clone this repository
 
@@ -83,4 +101,4 @@ docker build . -f Dockerfile-streamlit --tag idp1-demo
 docker run -v $PWD:/srv/idp-radio-1 --name radio idp1-demo
 ```
 
-5. The application will run on port `1337` of your local machine
+5. The application will run on port `8501` of your local machine
